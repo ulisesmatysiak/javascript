@@ -12,28 +12,28 @@ const mensajeDeIdentidad = () => {
 saludarProspectoNuevo (nombreProspecto, apellidoProspecto, edadProspecto);
 
 
-let sueldoNeto = Number(prompt("Inserta tu ingreso mensual"));
+let notaFinal = Number(prompt("Qué nota necesitas para aprobar?"));
 alert("Organicemos tu economia")
 
 for (let i = 1; i <= 1; i++){
     
-    let gastoUno = Number(prompt("Cuanto gastas en la compra mensual para tu hogar?"));
-    if (!parseInt(gastoUno)){
+    let notaUno = Number(prompt("Cuanto te sacaste en el primer examen?"));
+    if (!parseInt(notaUno)){
         alert("no ingresaste un numero");
         break;
-    } else if (gastoUno >= sueldoNeto ) {
+    } else if (notaUno >= notaFinal ) {
         alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoUno));
         break;
     } 
-    let gastoDos = Number(prompt("Cuanto gastas en tus servicios fijos?"));
-    if (!parseInt (gastoDos)) {
+    let notaDos = Number(prompt("Cuánto te sacaste en el segundo examen?"));
+    if (!parseInt (notaDos)) {
         alert("no ingresaste un numero");
         break;
     } else if (gastoDos >= sueldoNeto ) {
         alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoDos));
         break;
     }
-    let gastoTres = Number(prompt("Cuanto gastas en tu indumentaria?"));
+    let notaTres = Number(prompt("Cuánto te sacaste en el tercer examen?"));
     if (!parseInt (gastoTres)) {
         alert("no ingresaste un numero");
         break;
@@ -41,26 +41,8 @@ for (let i = 1; i <= 1; i++){
         alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoTres));
         break;
     }
-    let gastoCuatro = Number(prompt("Cuanto gastas en tu forma de trasladarte?"));
-    if (!parseInt (gastoCuatro)) {
-        alert("no ingresaste un numero");
-        break;
-    } else if (gastoCuatro >= sueldoNeto ) {
-        alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoCuatro));
-        break;
-    }
-    let gastoCinco = Number(prompt("Cuanto gastas en gastos varios?"));
-    if (!parseInt (gastoCinco))  {
-        alert("no ingresaste un numero");
-        break;
-    } else if (gastoCinco >= sueldoNeto ) {
-        alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoCinco));
-        break;
-    }
-    
-
-
-let gastoTotal = (gastoCinco + gastoCuatro + gastoTres + gastoDos + gastoUno);
+  
+let notaFinal = (notaUno + notaDos + notaTres);
 let resto = sueldoNeto - gastoTotal;
 
 alert("Tu gasto total es de " + gastoTotal );
