@@ -12,8 +12,8 @@ const mensajeDeIdentidad = () => {
 saludarProspectoNuevo (nombreProspecto, apellidoProspecto, edadProspecto);
 
 
-let notaFinal = Number(prompt("Qué nota necesitas para aprobar?"));
-alert("Organicemos tu economia")
+let notaEsperada = Number(prompt("Qué nota necesitas para aprobar?"));
+alert("Veamos tus calificaciones")
 
 for (let i = 1; i <= 1; i++){
     
@@ -21,32 +21,32 @@ for (let i = 1; i <= 1; i++){
     if (!parseInt(notaUno)){
         alert("no ingresaste un numero");
         break;
-    } else if (notaUno >= notaFinal ) {
-        alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoUno));
+    } else if (notaUno >= notaEsperada ) {
+        alert("aprobado" + (notaFinal - notaUno));
         break;
     } 
     let notaDos = Number(prompt("Cuánto te sacaste en el segundo examen?"));
     if (!parseInt (notaDos)) {
         alert("no ingresaste un numero");
         break;
-    } else if (gastoDos >= sueldoNeto ) {
-        alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoDos));
+    } else if (notaDos >= notaEsperada ) {
+        alert("aprobado" + (notaEsperada - notaDos));
         break;
     }
     let notaTres = Number(prompt("Cuánto te sacaste en el tercer examen?"));
     if (!parseInt (gastoTres)) {
         alert("no ingresaste un numero");
         break;
-    } else if (gastoTres >= sueldoNeto ) {
-        alert("Te gastataste todo tu sueldo, total $" + (sueldoNeto - gastoTres));
+    } else if (notaTres >= notaEsperada ) {
+        alert("aprobado" + (notaEsperada - notaTres));
         break;
     }
   
 let notaFinal = (notaUno + notaDos + notaTres);
-let resto = sueldoNeto - gastoTotal;
+let notaFaltante = notaFinal - notaEsperada;
 
 alert("Tu gasto total es de " + gastoTotal );
-alert(`Te quedan ${resto}.`);
+alert(`Te faltaron ${notaFaltante}.`);
 }
 
 mensajeDeIdentidad ();
