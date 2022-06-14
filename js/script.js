@@ -6,7 +6,7 @@ let apellidoProspecto = prompt ("Ingresa tu apellido");
 let edadProspecto = prompt ("Ingresa tu edad");
 
 const mensajeDeIdentidad = () => {
-    alert("Comencemos, crea tu propio estilo.");
+    alert("Comencemos");
 }
 
 saludarProspectoNuevo (nombreProspecto, apellidoProspecto, edadProspecto);
@@ -22,7 +22,7 @@ for (let i = 1; i <= 1; i++){
         alert("no ingresaste un numero");
         break;
     } else if (notaUno >= notaEsperada ) {
-        alert("aprobado" + (notaFinal - notaUno));
+        alert("aprobado" + (notaEsperada- notaUno));
         break;
     } 
     let notaDos = Number(prompt("Cuánto te sacaste en el segundo examen?"));
@@ -45,7 +45,7 @@ for (let i = 1; i <= 1; i++){
 let notaFinal = (notaUno + notaDos + notaTres);
 let notaFaltante = notaFinal - notaEsperada;
 
-alert("Tu gasto total es de " + gastoTotal );
+alert("Tu nota final es de " + notaFinal );
 alert(`Te faltaron ${notaFaltante}.`);
 }
 
