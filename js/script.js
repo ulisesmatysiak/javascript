@@ -12,7 +12,7 @@ const mensajeDeIdentidad = () => {
 saludarProspectoNuevo (nombreProspecto, apellidoProspecto, edadProspecto);
 
 
-let notaEsperada = Number(prompt("Sumadas las notas cuánto deberias sumar para aprobar?"));
+let notaEsperada = Number(prompt("Qué número deberías obtener sumadas las notas para aprobar?"));
 alert("Veamos tus calificaciones")
 
 for (let i = 1; i <= 1; i++){
