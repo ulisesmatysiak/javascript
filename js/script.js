@@ -1,54 +1,4 @@
-const saludarProspectoNuevo = (nombre, apellido, edad) => {
-    alert (`Bienvenid@ ${nombre} ${apellido}, tienes ${edad}.`);
-}
-let nombreProspecto = prompt ("Ingresa tu nombre");
-let apellidoProspecto = prompt ("Ingresa tu apellido");
-let edadProspecto = prompt ("Ingresa tu edad");
-
-const mensajeDeIdentidad = () => {
-    alert("Comencemos");
-}
-
-saludarProspectoNuevo (nombreProspecto, apellidoProspecto, edadProspecto);
-
-
-let notaEsperada = Number(prompt("Qué número deberías obtener sumadas las notas para aprobar?"));
-alert("Veamos tus calificaciones")
-
-for (let i = 1; i <= 1; i++){
-    
-    let notaUno = Number(prompt("Cuanto te sacaste en el primer examen?"));
-    if (!parseInt(notaUno)){
-        alert("no ingresaste un numero");
-        break;
-    } else if (notaUno >= notaEsperada ) {
-        alert("aprobado" + (notaEsperada- notaUno));
-        break;
-    } 
-    let notaDos = Number(prompt("Cuánto te sacaste en el segundo examen?"));
-    if (!parseInt (notaDos)) {
-        alert("no ingresaste un numero");
-        break;
-    } else if (notaDos >= notaEsperada ) {
-        alert("aprobado" + (notaEsperada - notaDos));
-        break;
-    }
-    let notaTres = Number(prompt("Cuánto te sacaste en el tercer examen?"));
-    if (!parseInt (gastoTres)) {
-        alert("no ingresaste un numero");
-        break;
-    } else if (notaTres >= notaEsperada ) {
-        alert("aprobado" + (notaEsperada - notaTres));
-        break;
-    }
-  
-let notaFinal = (notaUno + notaDos + notaTres);
-let notaFaltante = notaFinal - notaEsperada;
-
-alert("Tu nota final es de " + notaFinal );
-alert(`Te faltaron ${notaFaltante}.`);
-}
-
+<<<<<<< HEAD
 function datosDelProspecto (nombre, edad, localidad, calle) {
     this.nombre = nombre;
     this.edad = edad;
@@ -98,3 +48,79 @@ for (const misProductos of totalProductos) {
 
 totalProductos.splice (3, 2);
 console.log(totalProductos);
+=======
+let Aceites = [
+    {
+        id: 0,
+        marca: "Castrol",
+        descripcion: "10w-40",
+        tipo: "Semisintetico",
+        precio: 1500,
+    },
+    {
+        id: 1,
+        marca: "Mobil",
+        descripcion: "10w-50",
+        tipo: "Sintetico",
+        precio: 1000,
+    },
+    {
+        id: 2,
+        marca: "Total",
+        descripcion: "5w-40",
+        tipo: "Semisintetico",
+        precio: 1800,
+    },
+    {
+        id: 3,
+        marca: "YPF",
+        descripcion: "10w-60",
+        tipo: "Sintetico",
+        precio: 800,
+    },
+];
+
+
+Aceites.push({ id: 4,  marca: "Shell", descripcion: "10w-50", tipo: "Semisintetico", precio: 1500 })
+
+console.log(Aceites);
+
+let filtroCostos = {
+    aceite: 1200,
+    aire: 800,
+    combustible: 2000,
+    habitáculo: 800,
+}
+
+function cotizador() {
+    let nombre = prompt ("Bienvenido, ingrese su nombre y apellido")
+    let filtro = prompt("Bienvenido: " + nombre + " " + "\n Ingrese la opción deseada \n"  + "¿Qué filtro necesita? \n - 1 Filtro de aceite \n - 2 Filtro de aire \n - 3 Filtro de combustible \n - 4 Filtro de habitáculo \n - 5 Salir")
+    if (filtro == 1) {
+        alert("El precio del filtro es " + "$" + (filtroCostos.aceite*1.25))
+    } else if (filtro == 2) {
+        alert("El precio del filtro es " + "$" + (filtroCostos.aire*1.25))
+    } else if (filtro == 3) {
+        alert("El precio del filtro es " + "$" + (filtroCostos.combustible*1.25))
+    } else if (filtro == 4) {
+        alert("El precio del filtro es " + "$" + (filtroCostos.habitáculo*1.25))
+    } else if (filtro == 5) {
+        return
+    } else {
+        alert("Número incorrecto. Por favor ingrese una de las opciones")
+    }
+}
+
+cotizador();
+
+
+for (let i = 0; i < Aceites.length; i++) {
+    console.log(Aceites[i]);
+}
+
+let PrecioNuevoEjemplo1 = []
+
+PrecioNuevoEjemplo1 = Aceites.map((aceite) => {
+    aceite.precio = aceite.precio * 1.25
+    return aceite
+})
+>>>>>>> 04650fa5e5d4a0972336851292b96309fa1d37f9
